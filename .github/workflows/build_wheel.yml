@@ -53,9 +53,9 @@ jobs:
         run: |
           python -m pip install pytest
 
-      - name: Run pytest
-        run: |
-          python -m pytest pypcd/tests -k pcd_fname -k parse_header -k from_path -k add_fields
+      #- name: Run pytest
+      #  run: |
+      #    python -m pytest pypcd/tests
 
       - uses: actions/upload-artifact@v2
         name: Upload artifact

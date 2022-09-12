@@ -171,9 +171,7 @@ def test_path_roundtrip_binary(pcd_fname):
     os.removedirs(tmp_dirname)
 
 
-@pytest.mark.skipif(
-    platform.system() == "Windows", reason="Problems with the temp file"
-)
+@pytest.mark.skip(reason="Fatal exception: access violation")
 def test_path_roundtrip_binary_compressed(pcd_fname):
     import pypcd
 

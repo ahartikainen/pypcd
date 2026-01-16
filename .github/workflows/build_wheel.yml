@@ -22,10 +22,10 @@ jobs:
         python-version: ["3.12", "3.13"]
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
@@ -61,7 +61,7 @@ jobs:
       #  run: |
       #    python -m pytest pypcd/tests
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v6
         name: Upload artifact
         if: success() && github.ref == 'refs/heads/master'
         with:
